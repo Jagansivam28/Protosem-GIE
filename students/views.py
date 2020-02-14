@@ -372,7 +372,7 @@ def charts(request):
 
    print(score)
 
-   return render(request, "../../students/templates/basetemplate/chart.html",{"user_name":name,"stage_1_rating":average_score_stage_1,
+   return render(request, "../../students/templates/basetemplate/templates/student/chart.html", {"user_name":name, "stage_1_rating":average_score_stage_1,
                                                                               "stage_2_rating":average_score_stage_2,
                                                                               "stage_3_rating":average_score_stage_3,
                                                                               "hardware_iot_stage_1":hardware_iot_stage_1,
@@ -383,26 +383,26 @@ def charts(request):
                                                                               "ai_stage_3": ai_stage_3,
                                                                               "software_stage_1":software_stage_1,
                                                                               "software_stage_2": software_stage_2,
-                                                                              "software_stage_3": software_stage_3,
-                                                                              "product_design_stage_1":product_design_stage_1,
-                                                                              "product_design_stage_2": product_design_stage_2,
-                                                                              "product_design_stage_3": product_design_stage_3,
-                                                                              "software_platforms_stage_1":software_platforms_stage_1,
-                                                                              "software_platforms_stage_2": software_platforms_stage_2,
-                                                                              "software_platforms_stage_3": software_platforms_stage_3,
-                                                                              "programming_stage_1":programming_stage_1,
-                                                                              "programming_stage_2": programming_stage_2,
-                                                                              "programming_stage_3": programming_stage_3,
+                                                                                                 "software_stage_3": software_stage_3,
+                                                                                                 "product_design_stage_1":product_design_stage_1,
+                                                                                                 "product_design_stage_2": product_design_stage_2,
+                                                                                                 "product_design_stage_3": product_design_stage_3,
+                                                                                                 "software_platforms_stage_1":software_platforms_stage_1,
+                                                                                                 "software_platforms_stage_2": software_platforms_stage_2,
+                                                                                                 "software_platforms_stage_3": software_platforms_stage_3,
+                                                                                                 "programming_stage_1":programming_stage_1,
+                                                                                                 "programming_stage_2": programming_stage_2,
+                                                                                                 "programming_stage_3": programming_stage_3,
 
-                                                                              "intellectual_property_stage_1":intellectual_property_stage_1,
-                                                                              "intellectual_property_stage_2": intellectual_property_stage_2,
-                                                                              "intellectual_property_stage_3": intellectual_property_stage_3,
+                                                                                                 "intellectual_property_stage_1":intellectual_property_stage_1,
+                                                                                                 "intellectual_property_stage_2": intellectual_property_stage_2,
+                                                                                                 "intellectual_property_stage_3": intellectual_property_stage_3,
 
-                                                                              "innovation_stage_1":innovation_stage_1,
-                                                                              "innovation_stage_2": innovation_stage_2,
-                                                                              "innovation_stage_3": innovation_stage_3,
+                                                                                                 "innovation_stage_1":innovation_stage_1,
+                                                                                                 "innovation_stage_2": innovation_stage_2,
+                                                                                                 "innovation_stage_3": innovation_stage_3,
 
-                                                                              })
+                                                                                                 })
 
 
 @login_required(redirect_field_name='/login')
@@ -431,7 +431,7 @@ def hardware_iot(request):
         if name is None:
             name="admin"
         page_name = "Hardware/Iot"
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name,"page_name":page_name})
 
 
@@ -462,7 +462,7 @@ def ai(request):
         if name is None:
             name = "User"
         page_name = "AI/ML/Data Science"
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 @login_required(redirect_field_name='/login')
 def software(request):
@@ -490,7 +490,7 @@ def software(request):
         if name is None:
             name = "User"
 
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 @login_required(redirect_field_name='/login')
 def product_design(request):
@@ -517,7 +517,7 @@ def product_design(request):
         if name is None:
             name = "User"
 
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 @login_required(redirect_field_name='/login')
 def software_platforms(request):
@@ -544,7 +544,7 @@ def software_platforms(request):
         if name is None:
             name = "User"
         page_name = "Software Platform"
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 @login_required(redirect_field_name='/login')
 def programming(request):
@@ -572,7 +572,7 @@ def programming(request):
             name = "User"
         page_name = "Programming - Application Platform"
 
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 @login_required(redirect_field_name='/login')
 def intellectual_property(request):
@@ -600,7 +600,7 @@ def intellectual_property(request):
             name = "User"
         page_name = "IPR"
 
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name, "page_name": page_name})
 
 @login_required(redirect_field_name='/login')
@@ -629,7 +629,7 @@ def innovation(request):
             name = "User"
         page_name="Innovation"
 
-        return render(request, '../templates/basetemplate/update_gie.html',
+        return render(request, '../templates/basetemplate/templates/student/update_gie.html',
                       {'form': form, "last_updated": last_update, "user_name": name,"page_name":page_name})
 
 @login_required(redirect_field_name='/login')

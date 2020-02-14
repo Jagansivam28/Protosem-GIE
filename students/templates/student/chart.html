@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+       <title>Protosem GIE</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="../../static/student/basetemplate/css/font-face.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="../../static/student/basetemplate/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="../../static/student/basetemplate/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../../static/student/basetemplate/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../../static/student/basetemplate/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="http://protosem.tech/assets/img/protosem-logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href={% url "charts" %}>
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li class="has-sub">
+                              <a class="js-arrow" href="#">
+                                <i class="far fa-check-square"></i>Update GIE</a>
+                              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                     <li>
+                                      <a href={% url "hardware_iot" %}>Hardware Iot</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "ai" %}>AI/ML/Data Science</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "software" %}>Software/Application Development</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "product_design" %}>Product/Industrial Design</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "software_platforms" %}>Software Platforms</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "programming" %}>Programming - Application Platform</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "intellectual_property" %}>IPR</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "innovation" %}>Innovation</a>
+                                    </li>
+                              </ul>
+                            </li>
+                          <li>
+                             <a href={% url "logout" %}>
+                                 <i class="fas fa-reply"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                     <img src="http://protosem.tech/assets/img/protosem-logo.png" alt="CoolAdmin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                             <a href={% url "charts" %}>
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                              <a class="js-arrow" href="#">
+                                <i class="far fa-check-square"></i>Update GIE</a>
+                              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                     <li>
+                                      <a href={% url "hardware_iot" %}>Hardware Iot</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "ai" %}>AI/ML/Data Science</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "software" %}>Software/Application Development</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "product_design" %}>Product/Industrial Design</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "software_platforms" %}>Software Platforms</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "programming" %}>Programming - Application Platform</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "intellectual_property" %}>IPR</a>
+                                    </li>
+                                    <li>
+                                      <a href={% url "innovation" %}>Innovation</a>
+                                    </li>
+                              </ul>
+                            </li>
+                        <li>
+                             <a href={% url "logout" %}>
+                                 <i class="fas fa-reply"></i>Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <div class="header-button">
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix">
+                                        <div class="image">
+                                            <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a  href={% url "home" %}>{{ user_name }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Overall Score</h3>
+                                        <canvas id="OverAllChart" width="600" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Hardware/IoT</h3>
+                                        <canvas id="Hardware/IoT"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">AI/ML & Data Science</h3>
+                                        <canvas id="AI/ML & Data Science"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Software/Application Development</h3>
+                                        <canvas id="Software/Application Development"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Product/Industrial Design</h3>
+                                        <canvas id="Product/Industrial Design"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Software Platforms</h3>
+                                        <canvas id="Software Platforms"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Programming - Application Platform</h3>
+                                        <canvas id="Programming - Application Platform"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">IPR</h3>
+                                        <canvas id="IPR"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Innovation</h3>
+                                        <canvas id="Innovation"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT-->
+        </div>
+        <!-- END PAGE CONTAINER-->
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../../static/student/basetemplate/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="../../static/student/basetemplate/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="../../static/student/basetemplate/vendor/slick/slick.min.js">
+    </script>
+    <script src="../../static/student/basetemplate/vendor/wow/wow.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/animsition/animsition.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="../../static/student/basetemplate/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="../../static/student/basetemplate/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../../static/student/basetemplate/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="../../static/student/basetemplate/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS -->
+    <script src="../../static/student/basetemplate/js/main.js"></script>
+
+<!--   over all charts -->
+    <script>
+var ctx = document.getElementById('OverAllChart').getContext('2d');
+ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        defaultFontFamily: 'Poppins',
+        data: {
+          labels: ["Hardware/IoT", "AI/ML & Data Science", "Software/Application Development", "Industry/Product Design", "Software Platforms", "Programming Application Platform", "Intellectual Property","Innovation"],
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ stage_1_rating }},
+              borderColor: "#45a0ed",
+              borderWidth: "0",
+              backgroundColor: "#45a0ed",
+              fontFamily: "Poppins"
+            },
+            {
+              label: "Stage 2",
+              data:{{ stage_2_rating }},
+                borderColor: "#ff7f00",
+              borderWidth: "0",
+              backgroundColor: "#ff7f00",
+              fontFamily: "Poppins"
+
+            },
+            {
+              label: "Stage 3",
+              data: {{ stage_3_rating }},
+                borderColor: "#2dcc70",
+              borderWidth: "0",
+              backgroundColor: "#27ae61",
+              fontFamily: "Poppins"
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                fontFamily: "Poppins"
+
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                fontFamily: "Poppins"
+              }
+            }]
+          }
+        }
+      });
+</script>
+
+<!--   Hardware Iot charts -->
+    <script>
+
+    var ctx = document.getElementById("Hardware/IoT");
+      ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Electronics Circuit Design", "PCB Designing", "Embedded Hardware Platform", "Sensors & Actuators", "Modules Integrations with uP Il HC", "System Interfaces Implementation", "Data Acquisition Techniques Data Transmission Techniques","Basics of Networking","Power Design for Circuits"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ hardware_iot_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data:{{ hardware_iot_stage_2 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{ hardware_iot_stage_3 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+
+</script>
+
+<!--    ai ml charts -->
+    <script>
+
+    var ctx = document.getElementById("AI/ML & Data Science");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Data Modelling & Evaluation", " Probablity & Statistics", "Applied Math & Algorithms", "Applied Machine Learning , Algorithm/Models", "Distributed Computing", "Edge Computing"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ai_stage_1}},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data: {{ai_stage_2}},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{ai_stage_3}},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+<!-- Software/Application Development -->
+ <script>
+
+    var ctx = document.getElementById("Software/Application Development");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Application Architecture Design", " Mobile Application Development", "Cloud Platform", "Web Application Development", "Linux/mac Packaging and Deployment"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ software_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data: {{ software_stage_2 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{ software_stage_3 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+<!-- Product/Industrial Design -->
+<script>
+
+    var ctx = document.getElementById("Product/Industrial Design");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Rapid Prototyping", "Principles of Industrial Design Standard", "UI/UX Design", "CAD Design (Solid works/Fusion 360/Catia)", "Analysis of Mechanical Design" ],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ product_design_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data: {{ product_design_stage_2 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{ product_design_stage_3 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+
+<!-- Software Platforms    -->
+<script>
+
+    var ctx = document.getElementById("Software Platforms");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Eagle PCB", "PSIM/MultiSIM", "LabVIEW", "MATLAB ,Data Analysis", "Tableau", "TIBCO Spotfire"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ software_platforms_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data:  {{ software_platforms_stage_1 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data:  {{ software_platforms_stage_1 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+
+  <!-- Programming - Application Platform  -->
+<script>
+
+    var ctx = document.getElementById("Programming - Application Platform");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Defining Problem, Problem", " Computer Science Fundamentals", "Programming Techniques", "Programming languages known", ],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ programming_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data: {{ programming_stage_2 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{ programming_stage_3 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+
+
+
+<!--  IPR  -->
+
+<script>
+
+    var ctx = document.getElementById("IPR");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["IP Exploration & Patent Search", "Patent Drafting","keyword search"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{intellectual_property_stage_1}},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data: {{intellectual_property_stage_2}},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data: {{intellectual_property_stage_3}},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+
+<!-- Innovation  -->
+<script>
+
+    var ctx = document.getElementById("Innovation");
+       ctx.height = 200;
+      var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["Problem Validation", "Customer Development", "Crafting & Testing Value Proposition", "Solution Alternatives Exploration", "Product Vision & Pitch", "Grant Proposal Writing","Milestones Planning & Reporting"],
+          defaultFontFamily: 'Poppins',
+          datasets: [
+            {
+              label: "Stage 1",
+              data: {{ innovation_stage_1 }},
+              borderColor: "rgba(70, 163, 235, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(0, 123, 255, 0.4)"
+            },
+            {
+              label: "Stage 2",
+              data:  {{ innovation_stage_1 }},
+              borderColor: "rgba(255,154,9,0.9)",
+              borderWidth: "1",
+              backgroundColor: "rgba(255, 173, 0, 0.8)"
+            },
+              {
+              label: "Stage 3",
+              data:  {{ innovation_stage_1 }},
+              borderColor: "rgba(45, 204, 115, 0.8)",
+              borderWidth: "1",
+              backgroundColor: "rgba(45, 204, 115, 0.8)",
+            },
+          ]
+        },
+        options: {
+          legend: {
+            position: 'top',
+            labels: {
+              fontFamily: 'Poppins'
+            }
+
+          },
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              fontFamily: "Poppins"
+            }
+          }
+        }
+      });
+
+</script>
+
+</body>
+
+</html>
