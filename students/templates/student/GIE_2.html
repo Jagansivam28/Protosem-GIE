@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI/ML/Data Science</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      * {
+        border: 10px;
+        padding: 10px;
+        margin: 10px;
+      }
+      body, div, form, input, p {
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      font-weight: 400;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      form {
+      width: 100%;
+      box-shadow: 0 2px 5px #ccc;
+      background: #fff;
+      }
+      th, td {
+      width: 8%;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 15%;
+      text-align: left;
+      }
+      textarea:hover {
+
+      outline: none;
+      }
+      .comments-block, .radio-block {
+
+      }
+      .comments, question, .answer, .question-answer, table {
+      width: 100%;
+      }
+      .comments {
+
+      }
+      small {
+      display: block;
+      line-height: 18px;
+      opacity: 0.5;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .question-answer >div {
+      display: inline-block;
+
+      }
+      .btn-block {
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .comments-block, .radio-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .comments  {
+      width: 30%;
+      }
+      .answer {
+      width: 70%;
+      }
+      .question, .question-answer {
+      width: 50%;
+      }
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+
+        <img src='../GIE/forge%20logo.jpg' style='position:absolute; top:0; left:0;' width='100px' height='100px' alt='' />
+        <h1 style=" text-align:center">GRADUATE INNOVATION ENGINEER RUBRIC</h1>
+          <h1 style="text-align: center">AI/ML/Data Science</h1>
+          <div>
+              {% block content %}
+                 <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                         <button type="submit">Submit</button>
+                  </form>
+              {% endblock %}
+
+            </div>
+
+    </div>
+  </body>
+</html>

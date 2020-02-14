@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hardware IoT</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      * {
+        border: 10px;
+        padding: 10px;
+        margin: 10px;
+      }
+      p {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 20%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        padding: 2px 16px;
+        display : inline-flex;
+      }
+      body, div, form, input, p {
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      font-weight: 400;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      form {
+      width: 100%;
+      box-shadow: 0 2px 5px #ccc;
+      background: #fff;
+      }
+      th, td {
+      width: 8%;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 15%;
+      text-align: left;
+      }
+      textarea:hover {
+
+      outline: none;
+      }
+      .comments-block, .radio-block {
+
+      }
+      .comments, question, .answer, .question-answer, table {
+      width: 100%;
+      }
+      .comments {
+
+      }
+      .chart-scale{
+
+      }
+      small {
+      display: block;
+      line-height: 18px;
+      opacity: 0.5;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .question-answer >div {
+      display: inline-block;
+
+      }
+      .btn-block {
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .comments-block, .radio-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .comments  {
+      width: 30%;
+      }
+      .answer {
+      width: 70%;
+      }
+      .question, .question-answer {
+      width: 50%;
+      }
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+        <img src='../GIE/forge%20logo.jpg' style='position:absolute; top:0; left:0;' width='100px' height='100px' alt='' />
+        <h1 align="center">GRADUATE INNOVATION ENGINEER RUBRIC</h1>
+          <br>
+          <br>
+        <h3>Key Skills Assesment Areas(KSAAs):</h3>
+        <div>
+            <p>1 - Learner (Entry level, indicates merely the awareness of the concepts at an elementary level but would fail to even explain the utility and application of the concepts)</p>
+            <p>2 - Thinker (Recognised on being able to explain the concepts and to come up with innovative application of tech as tools to solve problems)</p>
+            <p>3 - Hacker (Recognised for being able to demonstrate the application of the concepts and to independently design and develop solutions for real-world problems)</p>
+            <p>4 - Engineer (Eligible only when MUP is deployed/ used by customer and the relevant tech plays a significant role in the innovative solution)</p>
+            <p>5 - Expert (Eligible only when MUP is deployed/ used by customer and the relevant tech plays a significant role in the innovative solution)</p>
+            <h1 style="text-align: center">Hardware & IoT</h1>
+            <div>
+               {% block body %}
+                 <form  method="post">{% csrf_token %}
+                        {{ form.as_p}}
+                         <button type="submit">Submit</button>
+                  </form>
+               {% endblock %}
+
+            </div>
+    </div>
+    </div>
+  </body>
+</html>
